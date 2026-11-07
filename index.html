@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crypto Scam Checker: free Chrome extension to spot crypto scam warning signs</title>
+  <meta name="description" content="Crypto Scam Checker is a free Chrome extension that checks a crypto website, a pasted chat or a link for the warning signs of crypto scams before you send money. Everything is checked on your device.">
+  <link rel="canonical" href="https://cryptorenegades.github.io/crypto-scam-checker/">
+  <meta name="theme-color" content="#2453e0">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="images/mark.svg">
+  <link rel="apple-touch-icon" href="images/icon128.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crypto Scam Checker">
+  <meta property="og:title" content="Crypto Scam Checker: spot crypto scam warning signs before you send money">
+  <meta property="og:description" content="Check a crypto website, a pasted chat or a link for the warning signs of common crypto scams. Free, private, and checked on your device.">
+  <meta property="og:url" content="https://cryptorenegades.github.io/crypto-scam-checker/">
+  <meta property="og:image" content="https://cryptorenegades.github.io/crypto-scam-checker/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Crypto Scam Checker popup showing a Critical risk result for a fake investment site">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crypto Scam Checker">
+  <meta name="twitter:description" content="Spot the warning signs of crypto scams on a page, in a chat or in a link, before you send money.">
+  <meta name="twitter:image" content="https://cryptorenegades.github.io/crypto-scam-checker/images/og.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Crypto Scam Checker",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome",
+    "description": "A Chrome extension that checks a web page, a pasted message or a link for the warning signs of crypto scams. Page content and messages never leave the browser.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "isAccessibleForFree": true,
+    "publisher": { "@type": "Organization", "name": "Crypto Renegades", "url": "https://www.cryptorenegades.co/" },
+    "url": "https://cryptorenegades.github.io/crypto-scam-checker/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Does it read my messages?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Only the text you paste into the \"A message\" tab, and only on your own computer. It cannot see your WhatsApp, Telegram, texts or email, and nothing you paste is sent anywhere or saved." } },
+      { "@type": "Question", "name": "Why did a real site get a warning?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Warnings describe signs, not proof. A new site, an unusual address ending or a short link can appear on honest sites too. Small signs alone give a result of \"A few warning signs\". Read what was found and decide with care." } },
+      { "@type": "Question", "name": "What should I do if I already sent money?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Stop sending money, even if you are told a fee will unlock your balance. Contact your bank or the payment service right away, keep every message and receipt, and report it to the FBI's Internet Crime Complaint Center at ic3.gov and to the FTC at reportfraud.ftc.gov. Be very wary of anyone who offers to recover your money for a fee." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="logo" href="./"><img src="images/mark.svg" alt="" width="28" height="28">Crypto Scam Checker</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#checks">What it checks</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary btn-small head-cta" data-install data-short href="#install"><span data-install-label>Add to Chrome</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Free Chrome extension, powered by Crypto Renegades</span>
+          <h1 id="hero-title">Crypto Scam Checker</h1>
+          <p class="lede">Spot the warning signs of crypto scams on a website, in a chat or in a link, before you send any money.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="install" data-install href="#install">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+              <span data-install-label>Add to Chrome, it's free</span>
+            </a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+          <ul class="trust">
+            <li>Checks run on your device</li>
+            <li>No account</li>
+            <li>No tracking</li>
+          </ul>
+        </div>
+        <div class="hero-shot">
+          <picture>
+            <source media="(max-width: 700px)" srcset="images/popup-critical.png">
+            <img src="images/01-warning-signs.png" width="1280" height="800" alt="The extension popup over a fake investment site, showing Critical risk with four warning signs, including promises of guaranteed profits and a website that is only three weeks old.">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">Three ways to check</h2>
+          <p>Scams follow the same scripts again and again: fake investment sites, "wrong number" chats, "pay a tax to withdraw", giveaways that double your crypto. Crypto Scam Checker knows those scripts.</p>
+        </div>
+        <div class="ways">
+          <article class="way">
+            <div class="way-shot"><img src="images/popup-critical.png" width="800" height="1200" alt="" loading="lazy"></div>
+            <div class="way-body">
+              <span class="way-num">1</span>
+              <h3>Check this page</h3>
+              <p>Click the icon on any website. You get a clear result, the exact words it found, why they matter, and a button that highlights them on the page.</p>
+            </div>
+          </article>
+          <article class="way">
+            <div class="way-shot"><img src="images/popup-message.png" width="800" height="1200" alt="" loading="lazy"></div>
+            <div class="way-body">
+              <span class="way-num">2</span>
+              <h3>Check a message</h3>
+              <p>Paste a WhatsApp, Telegram, text or email conversation. It looks for the patterns behind investment and romance scams.</p>
+            </div>
+          </article>
+          <article class="way">
+            <div class="way-shot"><img src="images/link-check.png" width="1520" height="3000" alt="" loading="lazy"></div>
+            <div class="way-body">
+              <span class="way-num">3</span>
+              <h3>Check a link</h3>
+              <p>Right-click any link and choose "Check this link". It looks at the address only. The link is never opened.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="checks" aria-labelledby="checks-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="checks-title">What it checks</h2>
+          <p>Each warning comes with a level, so you can tell a serious danger from a small sign.</p>
+        </div>
+        <div class="checks">
+          <div class="check"><span class="sev sev-c">Critical</span><div><h3>Asks for your wallet words</h3><p>Pages or messages that ask for your recovery phrase, seed phrase or private key, including forms with 12 or 24 word boxes.</p></div></div>
+          <div class="check"><span class="sev sev-c">Critical</span><div><h3>"Send 1, get 2 back"</h3><p>Giveaways that promise to double the crypto you send, and "validate your wallet" pages.</p></div></div>
+          <div class="check"><span class="sev sev-h">High</span><div><h3>Guaranteed profits</h3><p>"Guaranteed returns", "risk-free", "2% daily" and other fixed profit promises.</p></div></div>
+          <div class="check"><span class="sev sev-h">High</span><div><h3>Pay to withdraw</h3><p>Being told to pay a fee, tax or deposit before you can take your own money out.</p></div></div>
+          <div class="check"><span class="sev sev-h">High</span><div><h3>Copycat addresses</h3><p>Web addresses one letter off a well-known crypto site, or brand-new sites offering investments.</p></div></div>
+          <div class="check"><span class="sev sev-h">High</span><div><h3>Fake recovery services</h3><p>Offers to get back lost or stolen crypto, which often target people a second time.</p></div></div>
+          <div class="check"><span class="sev sev-m">Medium</span><div><h3>Chat app pressure</h3><p>A "manager" on WhatsApp or Telegram, a "wrong number" opener, a stranger who wants to teach you to trade.</p></div></div>
+          <div class="check"><span class="sev sev-m">Medium</span><div><h3>Rush and big names</h3><p>Countdown timers, "only today" offers, celebrity and "as seen on" claims, AI bots with profit figures.</p></div></div>
+          <div class="check"><span class="sev sev-m">Medium</span><div><h3>Website age</h3><p>How long ago the address was registered. Most fake sites are only weeks or months old.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap privacy-grid">
+        <div class="section-head" style="margin-bottom:0">
+          <h2 id="privacy-title">Private by design</h2>
+          <p>The extension does its work inside your browser. The only thing that ever leaves it is a website's name (like example.com), sent to the public registry for that address to look up how old it is.</p>
+          <p style="margin-top:16px"><a href="privacy.html">Read the privacy policy</a></p>
+        </div>
+        <div>
+          <ul class="never">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Reads a page only when you click the icon. It does not watch the sites you visit.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Never sends page content or pasted messages anywhere.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Never opens the links you ask it to check.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>No accounts, no analytics, no ads, nothing sold.</li>
+          </ul>
+          <p class="note-box" style="margin-top:16px"><b>An honest note:</b> no tool can catch every scam, and scammers change their wording often. "No warning signs found" never means a site is proven safe. Never send money to someone you only know online.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head"><h2 id="faq-title">Questions</h2></div>
+        <div class="faq">
+          <details>
+            <summary>Does it read my messages?</summary>
+            <div class="answer">
+              <p>Only the text you paste into the "A message" tab, and only on your own computer. It cannot see your WhatsApp, Telegram, texts or email on its own.</p>
+              <p>Nothing you paste is sent anywhere or saved. Close the popup and it is gone.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Why did a real site get a warning?</summary>
+            <div class="answer">
+              <p>Warnings describe signs, not proof. A brand-new website, an unusual address ending or a shortened link can appear on honest sites too. On their own these are small signs, and the result says "A few warning signs".</p>
+              <p>Each warning shows exactly what was found and why it matters, so you can judge it yourself. Pages that teach people about scams are recognised, so the scam phrases they quote are not counted.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What should I do if I already sent money?</summary>
+            <div class="answer">
+              <p>Stop sending money, even if you are told a fee or tax will unlock your balance. That is part of the scam.</p>
+              <p>Contact your bank or the payment service right away. Keep every message, address and receipt. Report it to the FBI's Internet Crime Complaint Center at <a href="https://www.ic3.gov/" rel="noopener">ic3.gov</a> and to the FTC at <a href="https://reportfraud.ftc.gov/" rel="noopener">reportfraud.ftc.gov</a>.</p>
+              <p>Be very wary of anyone who contacts you offering to recover your money for a fee. Fake recovery services target people who were just scammed.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is it free?</summary>
+            <div class="answer"><p>Yes. It is free and powered by Crypto Renegades. There is no paid version, no account and no sign-up.</p></div>
+          </details>
+          <details>
+            <summary>Does it work on my phone?</summary>
+            <div class="answer"><p>It works in Chrome on a computer (Windows, Mac, Linux and ChromeOS). Chrome on phones and tablets does not support extensions.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="cta-title">Check before you send</h2>
+          <p>Add it once. Use it whenever a website, message or link makes you unsure.</p>
+        </div>
+        <a class="btn btn-primary" data-install href="#install"><span data-install-label>Add to Chrome, it's free</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>&copy; <span id="year">2026</span>. Powered by <span data-publisher>Crypto Renegades</span>. Free crypto safety tools for everyday investors. Not affiliated with any exchange, wallet or government agency.</p>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="https://www.ic3.gov/" rel="noopener">Report to IC3</a>
+        <a href="https://reportfraud.ftc.gov/" rel="noopener">Report to the FTC</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="config.js"></script>
+</body>
+</html>
