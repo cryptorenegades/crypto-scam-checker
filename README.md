@@ -21,5 +21,5 @@ A small static site (landing page and privacy policy) for GitHub Pages. The Chro
 * `privacy.html`: privacy policy in plain English
 * `styles.css`: shared styles, light and dark mode
 * `config.js`: the install link and attribution settings
-* `images/`: screenshots, icons and the Open Graph image (1200x630)
+* ``: screenshots, icons and the Open Graph image (1200x630)
 * `sitemap.xml`, `robots.txt`: search engine files (update the base address)
